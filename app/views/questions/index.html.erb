@@ -1,0 +1,11 @@
+<h1>Questions:</h1>
+
+<ul>
+  <% @questions.each do |question| %>
+  <li>
+    <p><%= link_to question.title, question %> </p>
+    <p> <%= question.created_at.strftime('%B %d %Y') %> </p>
+  </li>
+  <%end%>
+</ul>
+<h1><%= link_to "Post a new Question:", "/questions/new"%></h1>

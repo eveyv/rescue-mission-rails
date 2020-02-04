@@ -1,0 +1,6 @@
+<h1>Post a new answer!</h1>
+<%= form_for(@answer) do |form|
+   <%= form.label :title %>
+   <%= form.text_field :description %>
+   <%= form.submit "Add your answer" %>
+<% end %>

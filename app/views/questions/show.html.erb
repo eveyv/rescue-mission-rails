@@ -1,0 +1,23 @@
+<h1><%=@question.title%></h1>
+<p><%= @question.description %></p>
+<p><%= @question.created_at.strftime('%B %d %Y') %> </p>
+
+<div class="">
+  <h2>All answers:</h2>
+  <ul>
+    <% @answers.each do |answer| %>
+    <li> <%= answer.description %> </li>
+    <% end %>
+  </ul>
+
+
+</div>
+
+<div class="width">
+  <%= form_for [@question, @answer] do |f| %>
+  <%= f.label :description, 'Add your answer:' %>
+  <%= f.text_area :description %>
+
+  <%= f.submit class: "button" %>
+  <% end %>
+</div>

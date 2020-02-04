@@ -1,0 +1,12 @@
+<h1>Don't see what you need?</h1>
+<h3>Add a Question!</h3>
+
+  <%= form_for(@question) do |f| %>
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+
+      <%= f.label :description %><br />
+      <%= f.text_field :description %>
+
+      <%= f.submit %>
+  <% end %>
