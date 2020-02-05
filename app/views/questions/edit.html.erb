@@ -1,0 +1,16 @@
+<h1>Edit a question:</h1>
+
+
+<div class="form">
+  
+  <%= form_for(@question) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit class: "button" %>
+  <% end  %>
+
+</div>

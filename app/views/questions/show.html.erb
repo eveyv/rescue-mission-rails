@@ -2,13 +2,22 @@
 <p><%= @question.description %></p>
 <p><%= @question.created_at.strftime('%B %d %Y') %> </p>
 
-<div class="">
+<div class="answers">
+
   <h2>All answers:</h2>
-  <ul>
-    <% @answers.each do |answer| %>
-    <li> <%= answer.description %> </li>
-    <% end %>
-  </ul>
+    <ul>
+      <% @answers.each do |answer| %>
+      <li> <%= answer.description %> </li>
+      <% end %>
+    </ul>
+
+    <h2>Edit:</h2>
+    <%= link_to "Edit Question", edit_question_path(@question), class: "button main" %>
+
+    <h2>Delete:</h2>
+    <%= link_to "Delete Question", @question, :method => :delete, class: "button main", :data => {:confirm => "Are you sure? Clicking \'OK' will delete this record forever."} %>
+
+
 
 
 </div>
